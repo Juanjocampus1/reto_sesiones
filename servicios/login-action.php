@@ -2,24 +2,18 @@
 $correo=$_POST['correo'];
 $contraseña=$_POST['contrasena'];
 
-$conexion = new PDO('mysql:host=localhost;dbname=practica','root','');
-$sql = "SELECT correo, contrasena FROM practica.usuario WHERE correo = :correo";
+$conexion=new PDO('mysql:host=localhost;dbname=sesiones','root','');
+$sql = "SELECT correo, contrasena FROM sesiones.usuario WHERE correo = :correo";
 
 $stmt = $conexion->prepare($sql);
 $stmt->bindParam(':correo',$correo);
 $stmt->execute();
 
-echo $correo;
-
 $result = $stmt->fetch(PDO::FETCH_ASSOC);
 
-var_dump($result);
-
 if ($result) {
-    echo'hola';
-    echo $contraseña;
-    echo $result;
-    if ($result && password_verify($contraseña, $result['contrasena']))  {
+// Verificar si la contraseña coincide utilizando password_verify
+    if (password_verify($contraseña, $result['contrasena'])) {
         session_start();
         $_SESSION['usuario'] = $correo;
         header('Location:../vistas/privado.php');
