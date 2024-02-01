@@ -1,0 +1,28 @@
+Contenidos
+PHP - sesiones y auth
+
+Funcionalidades y mejoras en la aplicación
+Protocolo de inicio.
+1. comprobar servicios de equipo. Deshabilitados todos los
+servidores web y bases de datos y Temas.
+
+2. iniciar PHPStorm y abrir proyecto de ayer
+
+3. iniciar Xampp y MySQL. conectar con Workbench
+
+-----------------------------------------
+
+Primera funcionalidad.
+zona privada, selecciona la ciudad de destino.
+si logout, se pierde la ciudad elegida. Pues NO.
+quiero que se mantenga. no puede usar cookies.
+almacenamiento persistente. base de datos (3)
+1. crear una base de datos en otra serivdor diferente al de usuarios, y guardar la info.
+2. en la misma baase de datos, hacer una tabla nueva con preferencias de usuario. relación por id usuario
+3. añaidr la ciudad en campo info de la tabla de usuarios
+
+Probar.
+inicio - login - privada. - meto una ciudad.- logout - inicio - login - privada
+mensaje = buscaste la ciudad X anteriormente. Sigues interesado?
+
+Archivo adjunto txt con conceptos importantes a tratar.
