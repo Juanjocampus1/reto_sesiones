@@ -29,5 +29,10 @@ Archivo adjunto txt con conceptos importantes a tratar.
 
 
 
+1-verificar con un select si el correo del tio exite al registrar caso de que no se registra
 
+2-si falla la contraseña o el correo al iniciar sesion mostrar el login otra vez on un mensaje de credenciales incorrectas
 
+3-mostrar el historia de busqueda de las ciudades con el nombre del usuario en una tabla y fecha en la que se buscaron
+
+4-front-end con tailwind
